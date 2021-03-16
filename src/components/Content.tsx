@@ -34,6 +34,8 @@ export function Content() {
       setMovies(response.data);
     });
 
+    console.log("id selecionado: " + selectedGenreId);
+
     api.get<GenreResponseProps>(`genres/${selectedGenreId}`).then(response => {
       setSelectedGenre(response.data);
     })

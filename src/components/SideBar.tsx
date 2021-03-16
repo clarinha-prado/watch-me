@@ -25,11 +25,7 @@ export function SideBar() {
     api.get<GenreResponseProps[]>('genres').then(response => {
       setGenres(response.data);
     });
-
-    // gênero inicial = action
-    changeGenre(1);
   }, []);
-
 
   return (
     <nav className="sidebar">

@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useEffect, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 interface MoviesProviderProps {
     children: ReactNode;
@@ -13,7 +13,7 @@ export const MoviesContext = createContext({} as MoviesContextData);
 
 export function MoviesProvider({ children }: MoviesProviderProps) {
 
-    const [selectedGenreId, setSelectedGenreId] = useState({} as number);
+    const [selectedGenreId, setSelectedGenreId] = useState(1);
 
     function changeGenre(id: number) {
         setSelectedGenreId(id);
